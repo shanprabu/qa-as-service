@@ -46,6 +46,7 @@
             <action method="addJs"><script>etheme/buyshop/jquery.jcarousel.min.js</script></action>
             <action method="addJs"><script>etheme/buyshop/jquery.inview.js</script></action>
             <action method="addJs"><script>etheme/buyshop/custom.js</script></action>
+            <action method="addItem"><type>skin_js</type><name>js/topmenu.js</name></action>
             <action method="addItem"><type>js</type><name>etheme/buyshop/html5.js</name><params/><if>lte IE 8</if></action>
             <action method="addItem"><type>js</type><name>etheme/buyshop/html5.js</name><params/><if>lt IE 9</if></action>
             <action method="addItem"><type>js</type><name>etheme/buyshop/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>
