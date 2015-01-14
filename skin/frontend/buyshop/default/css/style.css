@@ -3273,6 +3273,9 @@ a.fancy-zoom{ display: block;
     .preview {
         padding: 5px 5px 10px 5px;
         margin: 0;
+
+        //hover on product is highlighted
+        border: 3px solid rgb(90, 40, 114);
     }
 
     .preview .col-1 {
@@ -4548,6 +4551,8 @@ slideDown
     nav{display:block}
     #megamenu{display: none}
 }
+
+
 
 
 
