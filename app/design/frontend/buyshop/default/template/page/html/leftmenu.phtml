@@ -47,6 +47,7 @@
 
 <script>
     jQuery(document).ready(function () {
+
         jQuery('label.tree-toggler.closed' ).each(function() {
             if (jQuery(this).parent().find('ul.tree').length != 0){
                 jQuery(this).append( "<span class='collapse_button'>+</span>" );}
@@ -70,10 +71,8 @@
                 jQuery(this).parent().parent().find('span.collapse_button').html('+');
             }
         });
-
-
-
-
+        //hide the categories which are not active in a category page
+        jQuery('#collapsed-menu').children().not('.active').hide();
     });
 </script>
 
