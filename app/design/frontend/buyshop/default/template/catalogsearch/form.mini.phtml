@@ -34,8 +34,7 @@ background-repeat: no-repeat;
 margin-top: -<?php echo abs(Mage::getStoreConfig('buyshopcolors/header_navigation/decoration_fix'))?>px;
 padding-top: <?php echo abs(Mage::getStoreConfig('buyshopcolors/header_navigation/decoration_fix'))?>px;"<?php endif; unset ($temp);?>>
     <form class="form-search" id="form-search" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
-        <input id="search" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" type="text" class="search-query" value="<?php echo $text; ?>" onblur="if (this.value == '') {this.value = '<?php echo $text?>';}" onfocus="if(this.value == '<?php echo $text?>') {this.value = '';}">
+        <input id="search" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" type="text" class="search-query" placeholder="<?php echo $text; ?>">
         <button type="submit" class="btn" onClick="document.getElementById('form-search').submit()"><i class="icon-search-2 icon-large"></i></button>
     </form>
-
 </div>
