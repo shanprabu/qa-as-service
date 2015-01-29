@@ -1452,6 +1452,10 @@ section#content {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 46px 12px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    
+    /*hover on product is highlighted*/
+    border: 3px solid rgb(90, 40, 114);
 }
 
 .preview .col-1 {
@@ -3270,13 +3274,7 @@ a.fancy-zoom{ display: block;
         width: 60px;
     }
 
-    .preview {
-        padding: 5px 5px 10px 5px;
-        margin: 0;
-
-        //hover on product is highlighted
-        border: 3px solid rgb(90, 40, 114);
-    }
+  
 
     .preview .col-1 {
         width: 75px;
@@ -4444,7 +4442,7 @@ h3.product-name{ text-transform:inherit !important; font-family: arial !importan
 }
 #spy ul#nav {
     padding-top:5px;
-    padding-left:200px;
+  /*  padding-left:200px;*/
 }
 #spy .form-search-wrapper {
     float:right;
@@ -4471,13 +4469,13 @@ h3.product-name{ text-transform:inherit !important; font-family: arial !importan
 }
 #spy .spy-right {
     float:right;
-    margin-top: -45px;
+   /* margin-top: -45px;*/
 }
 #spy .spy-left {
     float:left;
-    margin-top: -53px;
+   /* margin-top: -53px;
     padding-left:30px;
-    width:170px;
+    width:170px;*/
 }
 
 
@@ -4552,9 +4550,7 @@ slideDown
     #megamenu{display: none}
 }
 
-
-
-
-
-
-
+/*increase the width of the single product display hovered item*/
+.cloud-zoom-big{
+    width:505px!important;
+}

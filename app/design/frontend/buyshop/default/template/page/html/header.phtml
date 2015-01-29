@@ -115,18 +115,24 @@
 <div id="spy" class="visible-desktop">
 <div class="container">
 <div class="row">
-<div class="span12">
-    <nav>
-
-    </nav>
-</div>
-<div class="spy-left">
+    <div class="spy-left">
     <div class="logo"><a href="<?php echo $this->getUrl('') ?>"><img   data-retina="true" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'buyshop/'.Mage::getStoreConfig('buyshopconfig/options/logo_header')?>"  alt="<?php echo $this->getLogoAlt() ?>"></a></div>
 </div>
 <div class="spy-right">
    <div class="spyshop"></div>
     <?php echo $this->getChildHtml('topLineSearch') ?>
 </div>
+<div class="span12">
+    <nav>
+
+    </nav>
+</div>
+     <!-- Added by Shruti for previous and next header topmenu navigation-->
+    <div id="header-navigation" style="position: absolute; top: 75px; right: 90px;">
+                    <a href="#"><img id="header-nav-prev" src="<?php echo $this->getSkinUrl('images/arrow_prev.png') ?>"  style="width: 12px;height: 12px;margin-right:10px"/></a>
+                    <a href="#"><img id="header-nav-next" src="<?php echo $this->getSkinUrl('images/arrow_next.png') ?>" style="width: 12px;height: 12px"/></a>
+                </div>
+    <!-- End - Code added by Shruti -->
 </div>
 </div>
 </div>
