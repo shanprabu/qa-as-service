@@ -28,15 +28,24 @@
 <?php $buttonTitle = $this->__('Add to Cart'); ?>
 <?php if($_product->isSaleable() && !Mage::getStoreConfig('buyshopconfig/options/catalog_mode')): ?>
     <div class="add-to-cart">
-
             <?php if(!$_product->isGrouped()): ?>
             <div class="qty">
                 <label for="qty"><?php echo $this->__('Qty:') ?></label>
-                <input id="qty" class="input-text qty" type="text" title="Qty" value="<?php echo $this->getProductDefaultQty() * 1 ?>" maxlength="12" name="qty" />
+                <input id="qty" class="input-text qty" type="number" title="Qty" min="1" value="<?php echo $this->getProductDefaultQty() * 1 ?>" maxlength="12" name="qty" />
             </div>
             <?php endif; ?>
             <button class="button btn-cart" title="<?php echo $buttonTitle ?>" type="button" onClick="productAddToCartForm.submit(this)"><i class="icon-basket"></i><?php echo $buttonTitle ?></button>
-
-
     </div>
 <?php endif; ?>
+
+<script type="text/javascript">
+//check if quantity should be a number and should be greater than equal to 1.
+jQuery('#qty').keypress(function checkIfNegativeQty(e)
+{
+    if(e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57))
+    {
+        this.value = 1;
+        return false;
+    } 
+});
+</script>)
