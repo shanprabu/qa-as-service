@@ -1,6 +1,20 @@
 function ajaxCompare(url,id){
-	url = url.replace("catalog/product_compare/add","ajax/whishlist/compare");
-	url += 'isAjax/1/';
+    
+    //limiting the maximum number of compared products to 5
+    if(jQuery('#compare-items').children().length > 4)
+    {
+        jQuery('#preloader .loader').hide();
+        jQuery('#preloader .inside').html("Maximum 5 products can be compared.");
+        jQuery('#preloader .message').fadeIn(300);
+
+        setTimeout(function(){
+            jQuery('#preloader .message').fadeOut();
+        },1500);
+        return;
+    }
+    
+    url = url.replace("catalog/product_compare/add","ajax/whishlist/compare");
+    url += 'isAjax/1/';
 
     jQuery('#preloader .loader').fadeIn(300);
 
