@@ -52,10 +52,29 @@ $_items = $_helper->getItemCount() > 0 ? $_helper->getItemCollection() : null;
         <div class="actions">
 
             <a class="button" href="<?php echo $_helper->getClearListUrl() ?>" onclick="return confirm('<?php echo $this->__('Are you sure you would like to remove all products from your comparison?') ?>');"><?php echo $this->__('Clear All') ?></a>
-            <button type="button" title="<?php echo $this->__('Compare') ?>" class="button" onclick="popWin('<?php echo $_helper->getListUrl() ?>','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"><span><span><?php echo $this->__('Compare') ?></span></span></button>
+            <button type="button" title="<?php echo $this->__('Compare') ?>" class="button" onclick="popWinCompare('<?php echo $_helper->getListUrl() ?>','compare','top:0,left:0,width=820,height=600,resizable=yes,scrollbars=yes')"><span><span><?php echo $this->__('Compare') ?></span></span></button>
         </div>
     <?php else: ?>
         <p class="empty"><?php echo $this->__('You have no items to compare.') ?></p>
     <?php endif; ?>
     </div>
 </div>
+
+
+<script type="text/javascript">
+    //atleast two products needed to open comparison window
+    function popWinCompare(url,win,para){ 
+        if(jQuery('#compare-items').children().length < 2)
+        {
+            jQuery('#preloader .loader').hide();
+            jQuery('#preloader .inside').html("Atleast 2 products needed to be compared.");
+            jQuery('#preloader .message').fadeIn(300);
+
+            setTimeout(function(){
+                jQuery('#preloader .message').fadeOut();
+            },1500);
+            return;
+        }
+        popWin(url,win,para);
+    }
+</script>
