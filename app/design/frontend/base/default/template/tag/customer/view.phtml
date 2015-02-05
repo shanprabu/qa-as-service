@@ -29,8 +29,10 @@
 </div>
 <?php echo $this->getMessagesBlock()->toHtml() ?>
 <p class="my-tag-edit">
-    <a href="#" title="<?php echo $this->__('Delete') ?>" onclick="if(confirm('<?php echo $this->__('Are you sure you want to delete this tag?') ?>')) window.location='<?php echo $this->getTagInfo()->getRemoveTagUrl(); ?>'; return false;" class="button btn-remove"><span><?php echo $this->__('Delete') ?></span></a>
+    <!-- the delete button is commented and instead a delete icon is provided as qa team requested -->
+    <!-- a href="#" title="<?php echo $this->__('Delete') ?>" onclick="if(confirm('<?php echo $this->__('Are you sure you want to delete this tag?') ?>')) window.location='<?php echo $this->getTagInfo()->getRemoveTagUrl(); ?>'; return false;" class="button btn-remove"><span><?php echo $this->__('Delete') ?></span></a-->
     <?php echo $this->__('<strong>Tag Name:</strong> %s', $this->escapeHtml($this->getTagInfo()->getName())) ?>
+    <a href="<?php echo $this->getTagInfo()->getRemoveTagUrl(); ?>" title="<?php echo $this->__('Delete') ?>" onclick="return confirm('<?php echo $this->__('Are you sure you want to delete this tag?') ?>');" class="icon-trash-2 custom_color" style="margin-left: 4px"></a>
 </p>
 <div class="clearer"></div>
 <?php echo $this->getToolbarHtml() ?>
